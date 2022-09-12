@@ -6,16 +6,20 @@
 //
 
 import UIKit
+ import CoreLocation
 
-class ViewController: UIViewController {
+
+class ViewController: UIViewController, CLLocationManagerDelegate {
     
     
     //MARK: - IBOutlet
     @IBOutlet weak var photosCollectionView: UICollectionView!
+    let myLocation = CLLocationManager()
     
     //MARK: - Variables
-    //var image:[Data?] = []
     var photoData:[Photo] = []
+ 
+   
     
 
     override func viewDidLoad() {
@@ -25,7 +29,11 @@ class ViewController: UIViewController {
         photosCollectionView.dataSource = self
         photosCollectionView.delegate = self
         photosCollectionView.register(UINib(nibName: "PhotoCell", bundle: nil), forCellWithReuseIdentifier: "photoCell")
-        
+        myLocation.delegate = self
+        myLocation.delegate = self
+        myLocation.desiredAccuracy = kCLLocationAccuracyBest
+        myLocation.requestWhenInUseAuthorization()
+        myLocation.startUpdatingLocation()
         fetchPhotos()
     }
     
@@ -33,7 +41,10 @@ class ViewController: UIViewController {
     func fetchPhotos() {
         
         // 1. Step One
-        let stringURL = "https://www.flickr.com/services/rest/?method=flickr.photos.search&api_key=cd51cb96b704535453ca2fdeb49c7367&lat=24.774265&lon=46.738586&radius=10&format=json&nojsoncallback=1"
+        let stringURL =         "https://www.flickr.com/services/rest/?method=flickr.photos.search&api_key=cd51cb96b704535453ca2fdeb49c7367&lat=\(myLocation.location?.coordinate.latitude ?? 0.0)&lon=\(myLocation.location?.coordinate.longitude ?? 0.0)&radius=10&format=json&nojsoncallback=1"
+
+        
+//        "https://www.flickr.com/services/rest/?method=flickr.photos.search&api_key=cd51cb96b704535453ca2fdeb49c7367&lat=24.774265&lon=46.738586&radius=10&format=json&nojsoncallback=1"
         guard let url = URL(string: stringURL) else {
             print("Url Error")
             return
@@ -107,4 +118,39 @@ class ViewController: UIViewController {
     }
     
 }
+
+var imageToCache = NSCache<NSString, UIImage>()
+extension UIImageView{
+    func loadImageUsingCache(_ urlString: String){
+
+
+
+        if let CacheImage = imageToCache.object(forKey: NSString(string:urlString)){
+            self.image = CacheImage
+            return
+        }
+        guard let url = URL(string: urlString) else { return}
+
+        URLSession.shared.dataTask(with: url) { data, _, error in
+            guard error != nil else {
+
+                print(error?.localizedDescription)
+                return
+
+            }
+            
+            if let data = data, let downloadImage = UIImage(data: data) {
+                DispatchQueue.main.async {
+                    self.image = downloadImage
+                    imageToCache.setObject(downloadImage, forKey: NSString(string: urlString))
+                }
+
+            }
+         
+        }.resume()
+        
+    }
+}
+
+
 

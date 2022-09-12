@@ -12,7 +12,6 @@ class PhotoCell: UICollectionViewCell {
     @IBOutlet weak var photoCell: UIImageView!
     @IBOutlet weak var distanceCell: UILabel!
     
-
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
