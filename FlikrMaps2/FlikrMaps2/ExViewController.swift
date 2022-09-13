@@ -24,18 +24,54 @@ extension ViewController : UICollectionViewDataSource {
             
             print("Url Crash")
             return UICollectionViewCell()
-        }
-        
-        guard let data1 = try? Data(contentsOf: url10) else {
             
-            print("Data Crash")
-            return UICollectionViewCell()
+            
         }
+        DispatchQueue.global().sync {
+            guard let data1 = try? Data(contentsOf: url10) else {
+                //self.photosCollectionView.reloadData()
+                print("Data Crash")
+
+            return
+               }
+            DispatchQueue.main.async {
+
+
+    //                photos = [photo]
+    //                print(photo)
+
+                cell.photoCell.image = UIImage(data: data1)
+
+            }
+        }
+//
+//        guard let data1 = try? Data(contentsOf: url10) else {
+//
+//            print("Data Crash")
+//            return UICollectionViewCell()
+//        }
         
-        cell.photoCell.image = UIImage(data: data1)
+        //this Updata 
+//        DispatchQueue.main.async {
+//
+//
+////                photos = [photo]
+////                print(photo)
+//
+//            cell.photoCell.image = UIImage(data: data1)
+//
+//        }
+        
+//     cell.photoCell.image = UIImage(data: data1)
+        let photosData = photoData[indexPath.row]
+        cell.photoCell.loadImageUsingCache("\(photosData)")
+        
+        
         
         return cell
     }
+    
+ 
     
     
     

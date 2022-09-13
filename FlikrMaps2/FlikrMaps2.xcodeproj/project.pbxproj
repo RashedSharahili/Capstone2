@@ -18,7 +18,27 @@
 		89BADCC728CDBC6F001CD1F4 /* photoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89BADCC628CDBC6F001CD1F4 /* photoModel.swift */; };
 		89BADCC928CDBC93001CD1F4 /* photoData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89BADCC828CDBC93001CD1F4 /* photoData.swift */; };
 		89BADCCB28CDBCCC001CD1F4 /* ExViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89BADCCA28CDBCCC001CD1F4 /* ExViewController.swift */; };
+		D4514DBD28CF0F2B00A4848B /* FlikrMaps2UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4514DBC28CF0F2B00A4848B /* FlikrMaps2UITests.swift */; };
+		D4514DBF28CF0F2B00A4848B /* FlikrMaps2UITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4514DBE28CF0F2B00A4848B /* FlikrMaps2UITestsLaunchTests.swift */; };
+		D4514DCC28CF0F3A00A4848B /* FlikrMaps2Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4514DCB28CF0F3A00A4848B /* FlikrMaps2Tests.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D4514DC028CF0F2B00A4848B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 89BADCA328CCF11E001CD1F4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 89BADCAA28CCF11E001CD1F4;
+			remoteInfo = FlikrMaps2;
+		};
+		D4514DCD28CF0F3A00A4848B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 89BADCA328CCF11E001CD1F4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 89BADCAA28CCF11E001CD1F4;
+			remoteInfo = FlikrMaps2;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		89BADCAB28CCF11E001CD1F4 /* FlikrMaps2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlikrMaps2.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -34,10 +54,29 @@
 		89BADCC628CDBC6F001CD1F4 /* photoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = photoModel.swift; sourceTree = "<group>"; };
 		89BADCC828CDBC93001CD1F4 /* photoData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = photoData.swift; sourceTree = "<group>"; };
 		89BADCCA28CDBCCC001CD1F4 /* ExViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExViewController.swift; sourceTree = "<group>"; };
+		D4514DBA28CF0F2B00A4848B /* FlikrMaps2UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FlikrMaps2UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D4514DBC28CF0F2B00A4848B /* FlikrMaps2UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlikrMaps2UITests.swift; sourceTree = "<group>"; };
+		D4514DBE28CF0F2B00A4848B /* FlikrMaps2UITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlikrMaps2UITestsLaunchTests.swift; sourceTree = "<group>"; };
+		D4514DC928CF0F3A00A4848B /* FlikrMaps2Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FlikrMaps2Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D4514DCB28CF0F3A00A4848B /* FlikrMaps2Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlikrMaps2Tests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		89BADCA828CCF11E001CD1F4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D4514DB728CF0F2B00A4848B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D4514DC628CF0F3A00A4848B /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -51,6 +90,8 @@
 			isa = PBXGroup;
 			children = (
 				89BADCAD28CCF11E001CD1F4 /* FlikrMaps2 */,
+				D4514DBB28CF0F2B00A4848B /* FlikrMaps2UITests */,
+				D4514DCA28CF0F3A00A4848B /* FlikrMaps2Tests */,
 				89BADCAC28CCF11E001CD1F4 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -59,6 +100,8 @@
 			isa = PBXGroup;
 			children = (
 				89BADCAB28CCF11E001CD1F4 /* FlikrMaps2.app */,
+				D4514DBA28CF0F2B00A4848B /* FlikrMaps2UITests.xctest */,
+				D4514DC928CF0F3A00A4848B /* FlikrMaps2Tests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -82,6 +125,23 @@
 			path = FlikrMaps2;
 			sourceTree = "<group>";
 		};
+		D4514DBB28CF0F2B00A4848B /* FlikrMaps2UITests */ = {
+			isa = PBXGroup;
+			children = (
+				D4514DBC28CF0F2B00A4848B /* FlikrMaps2UITests.swift */,
+				D4514DBE28CF0F2B00A4848B /* FlikrMaps2UITestsLaunchTests.swift */,
+			);
+			path = FlikrMaps2UITests;
+			sourceTree = "<group>";
+		};
+		D4514DCA28CF0F3A00A4848B /* FlikrMaps2Tests */ = {
+			isa = PBXGroup;
+			children = (
+				D4514DCB28CF0F3A00A4848B /* FlikrMaps2Tests.swift */,
+			);
+			path = FlikrMaps2Tests;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -102,6 +162,42 @@
 			productReference = 89BADCAB28CCF11E001CD1F4 /* FlikrMaps2.app */;
 			productType = "com.apple.product-type.application";
 		};
+		D4514DB928CF0F2B00A4848B /* FlikrMaps2UITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D4514DC428CF0F2B00A4848B /* Build configuration list for PBXNativeTarget "FlikrMaps2UITests" */;
+			buildPhases = (
+				D4514DB628CF0F2B00A4848B /* Sources */,
+				D4514DB728CF0F2B00A4848B /* Frameworks */,
+				D4514DB828CF0F2B00A4848B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D4514DC128CF0F2B00A4848B /* PBXTargetDependency */,
+			);
+			name = FlikrMaps2UITests;
+			productName = FlikrMaps2UITests;
+			productReference = D4514DBA28CF0F2B00A4848B /* FlikrMaps2UITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+		D4514DC828CF0F3A00A4848B /* FlikrMaps2Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D4514DCF28CF0F3A00A4848B /* Build configuration list for PBXNativeTarget "FlikrMaps2Tests" */;
+			buildPhases = (
+				D4514DC528CF0F3A00A4848B /* Sources */,
+				D4514DC628CF0F3A00A4848B /* Frameworks */,
+				D4514DC728CF0F3A00A4848B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D4514DCE28CF0F3A00A4848B /* PBXTargetDependency */,
+			);
+			name = FlikrMaps2Tests;
+			productName = FlikrMaps2Tests;
+			productReference = D4514DC928CF0F3A00A4848B /* FlikrMaps2Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -114,6 +210,14 @@
 				TargetAttributes = {
 					89BADCAA28CCF11E001CD1F4 = {
 						CreatedOnToolsVersion = 13.4.1;
+					};
+					D4514DB928CF0F2B00A4848B = {
+						CreatedOnToolsVersion = 13.4.1;
+						TestTargetID = 89BADCAA28CCF11E001CD1F4;
+					};
+					D4514DC828CF0F3A00A4848B = {
+						CreatedOnToolsVersion = 13.4.1;
+						TestTargetID = 89BADCAA28CCF11E001CD1F4;
 					};
 				};
 			};
@@ -131,6 +235,8 @@
 			projectRoot = "";
 			targets = (
 				89BADCAA28CCF11E001CD1F4 /* FlikrMaps2 */,
+				D4514DB928CF0F2B00A4848B /* FlikrMaps2UITests */,
+				D4514DC828CF0F3A00A4848B /* FlikrMaps2Tests */,
 			);
 		};
 /* End PBXProject section */
@@ -144,6 +250,20 @@
 				89BADCBB28CCF120001CD1F4 /* LaunchScreen.storyboard in Resources */,
 				89BADCB828CCF120001CD1F4 /* Assets.xcassets in Resources */,
 				89BADCB628CCF11E001CD1F4 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D4514DB828CF0F2B00A4848B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D4514DC728CF0F3A00A4848B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -164,7 +284,37 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		D4514DB628CF0F2B00A4848B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D4514DBD28CF0F2B00A4848B /* FlikrMaps2UITests.swift in Sources */,
+				D4514DBF28CF0F2B00A4848B /* FlikrMaps2UITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D4514DC528CF0F3A00A4848B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D4514DCC28CF0F3A00A4848B /* FlikrMaps2Tests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D4514DC128CF0F2B00A4848B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 89BADCAA28CCF11E001CD1F4 /* FlikrMaps2 */;
+			targetProxy = D4514DC028CF0F2B00A4848B /* PBXContainerItemProxy */;
+		};
+		D4514DCE28CF0F3A00A4848B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 89BADCAA28CCF11E001CD1F4 /* FlikrMaps2 */;
+			targetProxy = D4514DCD28CF0F3A00A4848B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		89BADCB428CCF11E001CD1F4 /* Main.storyboard */ = {
@@ -310,6 +460,9 @@
 				DEVELOPMENT_TEAM = H6PCFAPRFA;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = FlikrMaps2/Info.plist;
+				INFOPLIST_KEY_NSLocationUsageDescription = abc;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = abc;
+				INFOPLIST_KEY_NSPrincipalClass = "";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -338,6 +491,9 @@
 				DEVELOPMENT_TEAM = H6PCFAPRFA;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = FlikrMaps2/Info.plist;
+				INFOPLIST_KEY_NSLocationUsageDescription = abc;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = abc;
+				INFOPLIST_KEY_NSPrincipalClass = "";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -353,6 +509,76 @@
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		D4514DC228CF0F2B00A4848B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = PZ9N8J4Z42;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.FlikrMaps2UITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = FlikrMaps2;
+			};
+			name = Debug;
+		};
+		D4514DC328CF0F2B00A4848B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = PZ9N8J4Z42;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.FlikrMaps2UITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = FlikrMaps2;
+			};
+			name = Release;
+		};
+		D4514DD028CF0F3A00A4848B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = PZ9N8J4Z42;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.FlikrMaps2Tests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FlikrMaps2.app/FlikrMaps2";
+			};
+			name = Debug;
+		};
+		D4514DD128CF0F3A00A4848B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = PZ9N8J4Z42;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.FlikrMaps2Tests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FlikrMaps2.app/FlikrMaps2";
 			};
 			name = Release;
 		};
@@ -373,6 +599,24 @@
 			buildConfigurations = (
 				89BADCC028CCF120001CD1F4 /* Debug */,
 				89BADCC128CCF120001CD1F4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D4514DC428CF0F2B00A4848B /* Build configuration list for PBXNativeTarget "FlikrMaps2UITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D4514DC228CF0F2B00A4848B /* Debug */,
+				D4514DC328CF0F2B00A4848B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D4514DCF28CF0F3A00A4848B /* Build configuration list for PBXNativeTarget "FlikrMaps2Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D4514DD028CF0F3A00A4848B /* Debug */,
+				D4514DD128CF0F3A00A4848B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
